@@ -25,6 +25,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV PATH /usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # database.yml overrides (TODO: I may remove these later)
 ENV rails_env development
+ENV GOOGLEAPIKEY blahblah
 
 # Move Gemfile to tmp directory so bundle install caches
 WORKDIR /tmp
@@ -42,5 +43,7 @@ WORKDIR /rails
 
 # Expose some ports.
 EXPOSE 3000
+
+RUN EXPORT APIKEY=${GOOGLEAPIKEY}
 
 ENTRYPOINT rails server
