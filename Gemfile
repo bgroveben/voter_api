@@ -14,6 +14,8 @@ gem 'test_helper'
 
 gem 'versionist'
 
+gem 'google-api-client'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
