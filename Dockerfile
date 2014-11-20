@@ -44,6 +44,4 @@ WORKDIR /rails
 # Expose some ports.
 EXPOSE 3000
 
-RUN EXPORT APIKEY=${GOOGLEAPIKEY}
-
-ENTRYPOINT rails server
+ENTRYPOINT export APIKEY=${GOOGLEAPIKEY} && ./startup
