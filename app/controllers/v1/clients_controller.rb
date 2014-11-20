@@ -1,3 +1,8 @@
+## TODO
+## Create definitions that will allow the app to access Google's Civic Information API and
+## retrieve election info and representative info based on the users address. The 'civic_aide'
+## gem can be found at github.com/tylerpearson/civic_aide.
+
 require 'civic_aide'
 
 module V1
@@ -8,7 +13,7 @@ module V1
 ##  POST /clients.json
 
       def show
-        @client = Client.find(params[:id])
+        @client = Client.find(params[:id]) # Google's API requires an address
 
         render json: @client
       end
@@ -20,8 +25,6 @@ module V1
       end
   end
 end
-
-
 
 
 ## Set API key with global configuration so resources can be accessed directly

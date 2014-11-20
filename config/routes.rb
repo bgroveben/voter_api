@@ -1,3 +1,6 @@
+## TODO
+## Set routes for clients
+
 Rails.application.routes.draw do
   resources :users, except: [:new, :edit]
   api_version(:module => "V1", :path => {:value => "v1"}, :default => true) do
