@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
   resources :users, except: [:new, :edit]
   api_version(:module => "V1", :path => {:value => "v1"}, :default => true) do
-  
+
     get 'users/index' => 'users#index'
     get 'users/:id/candidates' => 'users#candidates'
     get 'users/:id/elections' => 'users#elections'
     get 'users/:id/issues' => 'users#issues'
+    get 'users/:id/clients' => 'users#clients'
 
     resources :candidates, only: [:show], :constraints => {:format => /(json)/ }
     resources :elections, only: [:show], :constraints => {:format => /(json)/ }
     resources :issues, only: [:show], :constraints => {:format => /(json)/ }
     resources :users, except: [:destroy], :constraints => {:format => /(json)/ }
+    resources :clients, only: [:show], :constraints => {:format => /(json)/ }
 
   end
 
