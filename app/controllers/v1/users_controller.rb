@@ -13,7 +13,7 @@ module V1
     def show
       @user = User.find_by_token(params[:id]) || User.find(params[:id])
 
-      render json: @user 
+      render json: @user
       # render json: @user, only: [:id, :token]
       # render json: User.find(params[:id]), only: [:id]
       # render json: @user.id
@@ -44,9 +44,14 @@ module V1
         render json: @user.errors, status: :unprocessable_entity
       end
     end
-    
+
     def candidates
       # candidate = Candidate.find(params[:id])
+      head :ok
+    end
+
+    def clients
+      # client = Client.find(params[:id])
       head :ok
     end
 
@@ -63,7 +68,7 @@ module V1
     #  def token
     #    @user = User.find_by_token(params[:id])
 
-    #    render json: @user 
+    #    render json: @user
     #  end
 
     # DELETE /users/1
