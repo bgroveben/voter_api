@@ -10,7 +10,7 @@ CivicAide.official_sources = true
 CivicAide.elections.all
 
 ## Find election info by address example
-## client.election(4015).at('4910 Willet Drive, Annandale, VA 22003')
+client.election(4015).at('4910 Willet Drive, Annandale, VA 22003')
 
 ## Retrieve political geography and representative information based on an address example
-## client.representatives.at('118 E. Main St. Carrboro, NC 27510')
+client.representatives.at('118 E. Main St. Carrboro, NC 27510')
