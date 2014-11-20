@@ -8,5 +8,5 @@ Database has 2 entries for users, 1 entry each for issues, candidates, and elect
 
 **Current Issues that need resolving
 1. Getting the app to work with the civic_aide gem (github.com/tylerpearson/civic_aide).
-   We can probably put the definitions in app/models/client.rb or the clients_controller.rb
+   I put some definitions in lib/civicaide.rb as a starting point.
 2. Updating the routes.
