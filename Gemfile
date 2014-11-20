@@ -16,6 +16,8 @@ gem 'versionist'
 
 gem 'google-api-client'
 
+gem 'civic_aide'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
