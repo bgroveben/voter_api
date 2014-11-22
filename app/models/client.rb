@@ -1,4 +1,5 @@
 class Client < ActiveRecord::Base
+  include Civicaide
 end
 
 ## require 'civic_aide'
