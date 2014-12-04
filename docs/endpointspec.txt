@@ -1,0 +1,56 @@
+For MVP:
+
+POST /createVoter -- takes postal Address, returns userId
+
+request
+{
+    "address": {
+        "address1": "1313 Mockingbird Lane",
+        "address2": "Apartment 13",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zipcode": "89115"
+    }
+}
+
+response:
+{
+    "userId”: “1234567890”
+}
+
+POST /issues -- takes uniqueId, issueIdList
+
+request
+{
+    "userId": "1234567890",
+    "issueList": [
+        1,
+        2,
+        3,
+        4
+    ]
+}
+
+response:
+Standard http 200 response
+
+GET /elections/{userId}
+
+response
+{
+    "election": {
+        "electionInfo": {
+            "date": "2014-10-10",
+            "address": "100 Main Street, Las Vegas NV 89101"
+        },
+        "candidates": [
+            {
+                "candidateId": "12345",
+                "name": "Louis Tarkanian",
+                "percentage": "70.2",
+                "ward": "1",
+                "photo_path": "/pic/louis.png"
+            }
+        ]
+    }
+}
