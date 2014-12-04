@@ -3,7 +3,7 @@
 ## retrieve election info and representative info based on the users address. The 'civic_aide'
 ## gem can be found at github.com/tylerpearson/civic_aide.
 
-require 'civic_aide'
+##require 'civic_aide'
 
 module V1
   class ClientsController < ApplicationController
